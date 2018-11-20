@@ -1,3 +1,4 @@
+// Main bot load
 const discord = require('discord.js')
 const fs = require('fs')
 const bot = new discord.Client()
@@ -12,7 +13,7 @@ fs.readdir('./commands/', (err, files) => {
        bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`))
     })
 })
-
+// Bot finding
 bot.on('ready', () => {
    console.log(`${bot.user.username} ready!`)
    bot.user.setActivity(`Loading ${bot.user.username}...`, {type: "STREAMING", url: "https://twitch.tv/discordapp"}) 
@@ -22,7 +23,7 @@ bot.on('ready', () => {
    
    fireLogger(`${bot.user.username} started up!`, bot, bot.user.avatarURL)
  })
-
+// Prefix cmds 
 bot.on('message', message => {
     if (!message.guild) return;
    if (!message.content.startsWith(prefix)) return;
@@ -32,12 +33,21 @@ bot.on('message', message => {
    const args = mArray.slice(1);
    const loggedcmd = mArray[0].slice(prefix.length)
    const cmd = bot.commands.get(loggedcmd);
-
+// Logs
   if (cmd) {
       cmd.run(bot, message, args)
       console.log(`${message.author.username} just used the ${loggedcmd} command.`)
       fireLogger(`${message.author.username} used the ${loggedcmd} command.`, bot, bot.user.avatarURL)
    }
+})
+// Join logs
+bot.on('guildCreate', guild => {
+   const gname = guild.name
+   const em = new (require('discord.js').RichEmbed)
+   .setDescription(`I just joined ${gname}.`)
+   .setTimestamp()
+   .setColor("RANDOM")
+   bot.channels.get('channelid').send({embed: em})
 })
 
 bot.login(token)

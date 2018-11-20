@@ -1,6 +1,5 @@
 const discord = require("discord.js")
-	const bot = new Discord.Client();
-	
+
 module.exports.run = (bot, message, args) => {
 message.guild.createChannel('main-chat', 'text')
 message.guild.createChannel('pictures', 'text')

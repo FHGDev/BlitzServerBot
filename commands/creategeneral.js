@@ -13,5 +13,5 @@ message.guild.createChannel('bot-cmds', 'text')
   }
 
 module.exports.help = {
-  name: "createcatchan"
+  name: "creategeneral"
 };

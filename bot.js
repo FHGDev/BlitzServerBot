@@ -46,7 +46,7 @@ bot.on('guildCreate', guild => {
    const em = new (require('discord.js').RichEmbed)
    .setDescription(`I just joined ${gname}.`)
    .setTimestamp()
-   .setColor("RANDOM")
+   .setColor("RED")
    bot.channels.get('channelid').send({embed: em})
 })
 

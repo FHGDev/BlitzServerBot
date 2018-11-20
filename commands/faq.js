@@ -2,11 +2,11 @@ const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
 	 const embed = new discord.RichEmbed()
-	 .addField( `SXVXN`, `Hey, so sxvxn, hes a good lad, he is just going through alot, so lets make this project good and work! FOR SXVXN!`)
+	 .addField( `What is this bot?`, `This bot is a bot made for creating discord servers! With some moderation features!`)
 	 .setColor("YELLOW") // Set to a different color if you want...
    message.channel.send({embed: embed})
 }
 
 module.exports.help = {
-   name: "sxvxn"
+   name: "info"
 }

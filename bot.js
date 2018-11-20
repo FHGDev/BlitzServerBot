@@ -17,7 +17,7 @@ bot.on('ready', () => {
    console.log(`${bot.user.username} ready!`)
    bot.user.setActivity(`Loading ${bot.user.username}...`, {type: "STREAMING", url: "https://twitch.tv/discordapp"}) 
    setTimeout(() => {
-      bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers`, {type: "WATCHING"})
+      bot.user.setActivity(`for ${prefix}help | ${bot.guilds.size} servers`, {type: "LISTENING"})
    },10000)
    
    fireLogger(`${bot.user.username} started up!`, bot, bot.user.avatarURL)

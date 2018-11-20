@@ -12,7 +12,6 @@ message.guild.createChannel('bot-cmds', 'text')
   .setFooter(`${message.author.username} created General Category`)
   message.channel.send({embed: em})
   }
-};
 
 module.exports.help = {
   name: "createcatchan"

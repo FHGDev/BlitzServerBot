@@ -38,7 +38,7 @@ module.exports.run = (bot, message, args) => {
   color: 'BLUE',
   mentionable: true
 })
-    message.guild.owner.addRole('Owner')
+   // message.guild.owner.addRole('Owner')
    message.guild.createRole({
   name: 'Server Creator',
   color: 'YELLOW',

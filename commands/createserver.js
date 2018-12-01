@@ -44,18 +44,18 @@ module.exports.run = (bot, message, args) => {
   color: 'YELLOW',
   mentionable: true
 })
-    message.guild.author.addRole('Server Creator')
+ //message.guild.author.addRole('Server Creator')
    message.guild.createRole({
   name: 'Staff',
   color: 'GREEN',
   mentionable: true
 })
    message.guild.createRole({
-  name: 'Mmeber',
+  name: 'Member',
   color: 'ORANGE',
   mentionable: true
 })
-    message.guild.members.addRole('Member')
+ //   message.guild.members.addRole('Member')
  let em = new discord.RichEmbed()
   .setTitle("Blitzbot Server created")
   .setDescription(`Okay! I ${message.author.username} created this server.`)

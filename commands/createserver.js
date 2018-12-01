@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
  if(!message.author.id == config.owners) return message.delete
  message.react('👍')
  message.react('👎')
- if(!message.reactions.count = 2) return message.send('Finding users that reacted')
+ if(!message.reactions.size = 2) return message.send('Finding users that reacted')
  if(!message.reactions.users == config.owners or client.id) return message.reply('Failed to see reactions because someone else reacted')
  message.guild.channels.delete
  message.guild.createChannel('rules', 'text' [{

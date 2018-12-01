@@ -3,16 +3,18 @@ const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
  message.reply('Do you really want me to delete all channels? This is NOT reversable!')
- if(!message.author.id == config.owners) return message.delete
+ if(!message.author.id == message.guild.ownerID) return message.delete(500);
  message.react('👍')
  message.react('👎')
- if(!message.reactions.size = 2) return message.send('Finding users that reacted')
- if(!message.reactions.users == config.owners or client.id) return message.reply('Failed to see reactions because someone else reacted')
- message.guild.channels.delete
+ if(!message.reactions.size == 2) return message.channel.send('Finding users that reacted')
+ if(message.author.bot) return;
+ message.channels.forEach((ch) => {
+  ch.delete()
+ })
  message.guild.createChannel('rules', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
- message.guild.createChannel('annoucements', 'text' [{
+ message.guild.createChannel('announcements', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
  message.guild.createChannel('main-chat', 'text')

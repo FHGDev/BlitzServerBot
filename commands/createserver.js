@@ -32,7 +32,7 @@ module.exports.run = (bot, message, args) => {
   allow: ['CONNECT'],
   deny: ['SPEAK'],
 }])
-  message.guild.setAFKchannel('AFK')
+  message.guild.setAFKChannel('AFK')
    message.guild.createRole({
   name: 'Owner',
   color: 'BLUE',

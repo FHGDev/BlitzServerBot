@@ -19,13 +19,8 @@ module.exports.run = (bot, message, args) => {
   deny: ['SEND_MESSAGES'],
   deny: ['READ_MESSAGES'],
 }]) 
- message.guild.createChannel('staff chat','voice' [{
-  deny: ['CONNECT'],
-}])
- message.guild.createChannel('AFK', 'voice'[{
-  allow: ['CONNECT'],
-  deny: ['SPEAK'],
-}])
+ message.guild.createChannel('staff chat', 'voice')
+ message.guild.createChannel('AFK', 'voice')
   message.guild.setAFKChannel('AFK')
    message.guild.createRole({
   name: 'Owner',

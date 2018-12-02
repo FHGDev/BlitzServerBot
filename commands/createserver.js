@@ -2,13 +2,6 @@ const discord = require("discord.js")
 const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
-// message.reply('Do you really want me to delete all channels? This is NOT reversable!')
-//if(!message.author.id == message.guild.ownerID) return message.delete(500);
-// message.react('👍')
-// message.react('👎')
-//if(!message.reactions.size == 2) return message.channel.send('Finding users that reacted')
-// if(message.author.bot) return;
- message.guild.channels.delete()
  message.guild.createChannel('rules', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
@@ -38,13 +31,11 @@ module.exports.run = (bot, message, args) => {
   color: 'BLUE',
   mentionable: true
 })
-   // message.guild.owner.addRole('Owner')
    message.guild.createRole({
   name: 'Server Creator',
   color: 'YELLOW',
   mentionable: true
 })
- //message.guild.author.addRole('Server Creator')
    message.guild.createRole({
   name: 'Staff',
   color: 'GREEN',
@@ -55,7 +46,6 @@ module.exports.run = (bot, message, args) => {
   color: 'ORANGE',
   mentionable: true
 })
- //   message.guild.members.addRole('Member')
  let em = new discord.RichEmbed()
   .setTitle("Blitzbot Server created")
   .setDescription(`Okay! I ${message.author.username} created this server.`)

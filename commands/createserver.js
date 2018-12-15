@@ -21,7 +21,7 @@ message.guild.createChannel('General', 'category')
   deny: ['SEND_MESSAGES'],
   deny: ['READ_MESSAGES'],
 }]) 
- message.guild.createChannel('staff chat', 'voice')
+ message.guild.createChannel('Staff Chat', 'voice')
  message.guild.createChannel('AFK', 'category')
  message.guild.createChannel('AFK', 'voice')
   message.guild.setAFKChannel('AFK')

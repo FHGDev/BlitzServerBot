@@ -3,23 +3,32 @@ const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
  message.guild.channels.delete()
+ message.guild.createChannel('Info', 'category' [{
+  deny: ['SEND_MESSAGES'],
+}])
  message.guild.createChannel('rules', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
  message.guild.createChannel('announcements', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
+message.guild.createChannel('General', 'category')
  message.guild.createChannel('main-chat', 'text')
  message.guild.createChannel('pictures', 'text')
  message.guild.createChannel('bot-cmds', 'text')
  message.guild.createChannel('spam', 'text')
  message.guild.createChannel('Voice Chat 1', 'voice')
  message.guild.createChannel('Game Chat', 'voice')
+ message.guild.createChannel('Staff', 'category' [{
+  deny: ['SEND_MESSAGES'],
+  deny: ['READ_MESSAGES'],
+}]) 
  message.guild.createChannel('staff-chat','text' [{
   deny: ['SEND_MESSAGES'],
   deny: ['READ_MESSAGES'],
 }]) 
  message.guild.createChannel('staff chat', 'voice')
+ message.guild.createChannel('AFK', 'category')
  message.guild.createChannel('AFK', 'voice')
   message.guild.setAFKChannel('AFK')
    message.guild.createRole({

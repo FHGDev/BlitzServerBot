@@ -2,7 +2,6 @@ const discord = require("discord.js")
 const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
- message.guild.channels.delete()
  message.guild.createChannel('Info', 'category' [{
   deny: ['SEND_MESSAGES'],
 }])

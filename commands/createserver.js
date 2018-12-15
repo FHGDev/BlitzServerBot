@@ -2,9 +2,7 @@ const discord = require("discord.js")
 const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
- message.guild.createChannel('Info', 'category' [{
-  deny: ['SEND_MESSAGES'],
-}])
+ message.guild.createChannel('Info', 'category')
  message.guild.createChannel('rules', 'text' [{
   deny: ['SEND_MESSAGES'],
 }])
@@ -18,10 +16,7 @@ message.guild.createChannel('General', 'category')
  message.guild.createChannel('spam', 'text')
  message.guild.createChannel('Voice Chat 1', 'voice')
  message.guild.createChannel('Game Chat', 'voice')
- message.guild.createChannel('Staff', 'category' [{
-  deny: ['SEND_MESSAGES'],
-  deny: ['READ_MESSAGES'],
-}]) 
+ message.guild.createChannel('Staff', 'category') 
  message.guild.createChannel('staff-chat','text' [{
   deny: ['SEND_MESSAGES'],
   deny: ['READ_MESSAGES'],

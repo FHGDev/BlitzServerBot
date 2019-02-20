@@ -1,8 +1,8 @@
 {
-  "name": "ServerCreator",
-  "version": "0.1.0",
+  "name": "servercreator",
+  "version": "1.0.0",
   "description": "Server Creation Bot",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlitzServerDevs/BlitzServerBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlitzServerDevs/BlitzServerBot/issues"
+  },
+  "homepage": "https://github.com/BlitzServerDevs/BlitzServerBot#readme"
 }
